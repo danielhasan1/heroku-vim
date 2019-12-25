@@ -16,9 +16,9 @@ class Heroku::Command::Vim < Heroku::Command::Run
 
   def vim_cmd
     <<-CMD
-mkdir vim
-curl https://s3.amazonaws.com/heroku-vim/vim-7.3.tar.gz --location --silent | tar xz -C vim
-export PATH=$PATH:/app/vim/bin
+mkdir /app/nano
+curl https://github.com/Ehryk/heroku-nano/raw/master/heroku-nano-2.5.1/nano.tar.gz --location --silent | tar xz -C /app/nano
+export PATH=$PATH:/app/nano
 bash
     CMD
   end
